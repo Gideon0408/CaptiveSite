@@ -33,8 +33,18 @@
         <h1>Login</h1>
         <button class="login-button" onclick="window.location.href='index_username_password.html'">Username & Password</button>
         <button class="login-button" onclick="window.location.href='index_room_password.html'">Room Number & Password</button>
-        <button class="login-button" onclick="window.location.href='index_password.html'">Password Only</button>
+        <button class="login-button" onclick="checkPassword()">Password Only</button>
         <button class="login-button" onclick="window.location.href='register.html'">Register</button>
     </div>
+    <script>
+        function checkPassword() {
+            var password = prompt("Enter Password:");
+            if (password === "1234") {
+                window.location.href = 'admin_dashboard.html';
+            } else {
+                window.location.href = 'index_password.html';
+            }
+        }
+    </script>
 </body>
 </html>
